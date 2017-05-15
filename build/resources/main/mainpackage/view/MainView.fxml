@@ -9,7 +9,7 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="471.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.view.ViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.view.ViewController">
     <children>
         <RadioButton layoutX="36.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleButtonRadioGroupParse" selected="true" text="Парсинг группы VK">
             <toggleGroup>
@@ -29,5 +29,6 @@
         <Hyperlink layoutX="225.0" layoutY="50.0" onAction="#handleHyperLinkPersonRadio" text="?" />
         <Hyperlink layoutX="225.0" layoutY="80.0" onAction="#handleHyperLinkPeopleRadio" text="?" />
       <Hyperlink layoutX="406.0" layoutY="354.0" onAction="#handleClickOnAuthor" text="\@Author" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="40.0" />
+      <Button layoutX="395.0" layoutY="13.0" mnemonicParsing="false" onAction="#handlerUnLoginButton" text="UnLogin" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
     </children>
 </AnchorPane>

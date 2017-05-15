@@ -66,7 +66,7 @@ set CMD_LINE_ARGS=%*
 set CLASSPATH=%APP_HOME%\lib\BayParser-1.2.jar;%APP_HOME%\lib\sdk-0.5.2.jar;%APP_HOME%\lib\slf4j-api-1.7.22.jar;%APP_HOME%\lib\commons-collections4-4.1.jar;%APP_HOME%\lib\httpmime-4.5.2.jar;%APP_HOME%\lib\commons-io-2.5.jar;%APP_HOME%\lib\httpclient-4.5.2.jar;%APP_HOME%\lib\gson-2.8.0.jar;%APP_HOME%\lib\commons-lang3-3.5.jar;%APP_HOME%\lib\httpcore-4.4.4.jar;%APP_HOME%\lib\commons-logging-1.2.jar;%APP_HOME%\lib\commons-codec-1.9.jar
 
 @rem Execute bayparser
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %BAYPARSER_OPTS%  -classpath "%CLASSPATH%" bayparser.mainpackage.PSVM %CMD_LINE_ARGS%
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %BAYPARSER_OPTS%  -classpath "%CLASSPATH%" mainpackage.PSVM %CMD_LINE_ARGS%
 
 :end
 @rem End local scope for the variables with windows NT shell

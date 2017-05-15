@@ -1,13 +1,25 @@
 group 'ru.bayov'
-version '1.2'
+version "1.2.1"
 
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'idea'
 
-mainClassName = 'bayparser.mainpackage.PSVM'
+mainClassName = "mainpackage.PSVM"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes "Implementation-Title": "BayParser",
+                "Implementation-Version": version,
+                "Main-Class": mainClassName
+    }
+    baseName = project.name
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
 
 repositories {
     mavenCentral()
@@ -21,7 +33,7 @@ dependencies {
 jar {
     baseName = 'BayParser'
     version =  '1.2'
-    manifest.attributes("Main-Class": mainClassName);
+    manifest.attributes("Main-Class": mainClassName)
 }
 
 task wrapper(type: Wrapper) {

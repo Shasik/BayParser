@@ -9,9 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.view.login.LoginPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.view.login.LoginPageController">
     <children>
-        <ButtonBar layoutX="8.0" layoutY="163.0" prefHeight="40.0" prefWidth="246.0" AnchorPane.bottomAnchor="47.0" AnchorPane.rightAnchor="46.0">
+        <ButtonBar layoutX="8.0" layoutY="163.0" prefHeight="40.0" prefWidth="246.0" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="50.0">
             <buttons>
                 <Button mnemonicParsing="false" onAction="#handleOkButtonClicked" text="OK" translateX="-50.0" />
                 <Button mnemonicParsing="false" onAction="#handleCancelButtonClicked" text="Cancel" />
@@ -27,6 +27,5 @@
         </Label>
         <PasswordField fx:id="passwordTextField" layoutX="26.0" layoutY="135.0" prefHeight="25.0" prefWidth="246.0" />
         <WebView fx:id="webViewOnLogin" prefHeight="0.1" prefWidth="0.1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-          <Button layoutX="92.0" layoutY="205.0" mnemonicParsing="false" onAction="#handleAuthThrVKCOMButtonClicked" prefHeight="33.0" prefWidth="110.0" text="Auth thr VK.com" />
     </children>
 </AnchorPane>

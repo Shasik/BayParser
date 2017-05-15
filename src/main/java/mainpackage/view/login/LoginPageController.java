@@ -7,9 +7,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.awt.*;
-import java.io.IOException;
-import java.net.URI;
+import java.io.*;
 import java.net.URISyntaxException;
 
 public class LoginPageController {
@@ -20,7 +18,6 @@ public class LoginPageController {
     @FXML
 
     private Stage mainStage;
-    private boolean isAuthorized = false;
 
     public void setMainStage(Stage mainStage) {
         this.mainStage = mainStage;
@@ -47,7 +44,6 @@ public class LoginPageController {
             alert.setTitle("Hello!");
             alert.setHeaderText("Приветствие");
             alert.setContentText("Привет, " + authorizationOnVkCom.getVkFirstName() + "!");
-            isAuthorized = true;
             alert.showAndWait();
             mainStage.close();
         }
@@ -57,11 +53,4 @@ public class LoginPageController {
         System.exit(0);
     }
 
-    public void handleAuthThrVKCOMButtonClicked(ActionEvent actionEvent) throws IOException {
-        Desktop.getDesktop().browse(URI.create("https://oauth.vk.com/authorize?client_id=6022600&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=friends,wall,offline,groups,email&response_type=token&v=5.64"));
-
-
-
-        mainStage.close();
-    }
 }

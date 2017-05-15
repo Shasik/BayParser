@@ -8,9 +8,7 @@ import com.vk.api.sdk.exceptions.ClientException;
 import com.vk.api.sdk.httpclient.HttpTransportClient;
 
 import javax.net.ssl.HttpsURLConnection;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -39,6 +37,18 @@ public class AuthorizationOnVkCom {
 
     public static UserActor getActor() {
         return actor;
+    }
+
+    public static void setAccessToken(String accessToken) {
+        ACCESS_TOKEN = accessToken;
+    }
+
+    public static void setVk_id(Integer vk_id) {
+        AuthorizationOnVkCom.vk_id = vk_id;
+    }
+
+    public static void easyGo() {
+        actor = new UserActor(vk_id, ACCESS_TOKEN);
     }
 
     public static VkApiClient getVkApiClient() {
@@ -81,6 +91,34 @@ public class AuthorizationOnVkCom {
             Thread.sleep(100);
         } catch (IOException | InterruptedException | ClientException | ApiException e) {
             e.printStackTrace();
+        }
+        if (ACCESS_TOKEN != null && vk_id != 0) {
+            String token = ACCESS_TOKEN;
+            String id = String.valueOf(vk_id);
+            try (OutputStream outputStream = new FileOutputStream("autologin");
+                 BufferedWriter saveToFileUserData = new BufferedWriter(new OutputStreamWriter(outputStream))) {
+                saveToFileUserData.write("[AUTOLOGIN]");
+
+                saveToFileUserData.write("\r\nTOKEN:");
+                char[] tokenArr = token.toCharArray();
+                StringBuilder sbLog = new StringBuilder();
+                for (Character charLog : tokenArr) {
+                    int temp = ~charLog;
+                    sbLog.append(temp).append("\\");
+                }
+                saveToFileUserData.write(String.valueOf(sbLog));
+
+                saveToFileUserData.write("\r\nID:");
+                char[] idArr = id.toCharArray();
+                StringBuilder sbPass = new StringBuilder();
+                for (Character charPass : idArr) {
+                    int temp = ~charPass;
+                    sbPass.append(temp).append("\\");
+                }
+                saveToFileUserData.write(String.valueOf(sbPass));
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
         }
     }
 

@@ -14,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -155,5 +156,11 @@ public class ViewController {
 
     public void handleClickOnAuthor(ActionEvent actionEvent) throws IOException, URISyntaxException {
         Desktop.getDesktop().browse(new URI("http://vk.com/bayovchik"));
+    }
+
+    public void handlerUnLoginButton(ActionEvent actionEvent) {
+        File file = new File("autologin");
+        file.delete();
+        System.exit(0);
     }
 }
