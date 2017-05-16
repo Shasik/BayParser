@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="116.0" layoutY="14.0" text="Задайте искомые параметры">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <CheckBox layoutX="14.0" layoutY="75.0" mnemonicParsing="false" text="Имя" />
+      <CheckBox layoutX="14.0" layoutY="106.0" mnemonicParsing="false" text="Пол" />
+      <CheckBox layoutX="14.0" layoutY="138.0" mnemonicParsing="false" text="Возможность отправить ЛС" />
+      <CheckBox layoutX="14.0" layoutY="170.0" mnemonicParsing="false" text="Страна" />
+      <CheckBox layoutX="14.0" layoutY="203.0" mnemonicParsing="false" text="Город" />
+      <CheckBox layoutX="14.0" layoutY="237.0" mnemonicParsing="false" text="Возраст" />
+      <CheckBox layoutX="14.0" layoutY="272.0" mnemonicParsing="false" text="Моб телефон" />
+      <CheckBox layoutX="14.0" layoutY="305.0" mnemonicParsing="false" text="Семейное положение" />
+      <CheckBox layoutX="14.0" layoutY="338.0" mnemonicParsing="false" text="Skype" />
+      <CheckBox layoutX="14.0" layoutY="369.0" mnemonicParsing="false" text="Instagram" />
+      <ChoiceBox fx:id="pickerFieldOnSex" layoutX="231.0" layoutY="102.0" prefWidth="150.0" />
+      <TextField fx:id="textFieldOnCountry" layoutX="231.0" layoutY="166.0" promptText="Оставьте пустым" />
+      <TextField fx:id="textFieldOnCity" layoutX="231.0" layoutY="199.0" promptText="Оставьте пустым" />
+      <TextField fx:id="textFieldOnAge" layoutX="231.0" layoutY="233.0" promptText="Оставьте пустым" />
+      <ChoiceBox fx:id="pickerFieldOnSP" layoutX="231.0" layoutY="301.0" prefWidth="150.0" />
+      <TextField fx:id="textFieldForName" layoutX="231.0" layoutY="71.0" promptText="Оставьте пустым" />
+      <Label layoutX="41.0" layoutY="35.0" text="Если не нужна фильтрация, но нужны данные, оставьте поле пустым" />
+      <ButtonBar layoutX="232.0" layoutY="393.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="25.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#handleOkClickButton" text="OK" />
+            <Button mnemonicParsing="false" onAction="#handleCancelClickButton" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

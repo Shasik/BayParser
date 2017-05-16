@@ -17,7 +17,7 @@
             </toggleGroup>
         </RadioButton>
         <RadioButton layoutX="36.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleButtonRadioPersonParse" text="Парсинг человека VK" toggleGroup="$ParseGroup" />
-        <RadioButton disable="true" layoutX="36.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleButtonRadioPeopleParse" text="Парсинг людей в группе VK" toggleGroup="$ParseGroup" />
+        <RadioButton disable="true" layoutX="36.0" layoutY="83.0" mnemonicParsing="false" onAction="#handleButtonRadioPeopleParse" text="Выборочный парсинг по параметрам" toggleGroup="$ParseGroup" />
 
         <Label fx:id="actionLabelRadioButton" alignment="CENTER" layoutX="66.0" layoutY="159.0" prefHeight="17.0" prefWidth="340.0" text="Введите адрес паблика в формате /public_address" />
         <TextField fx:id="publicName" layoutX="51.0" layoutY="189.0" prefHeight="25.0" prefWidth="362.0" />

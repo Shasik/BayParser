@@ -219,7 +219,8 @@ public class AuthorizationOnVkCom {
 
     private void getVkFirstNameCurrentUser() throws IOException, ClientException, ApiException {
         actor = new UserActor(vk_id, ACCESS_TOKEN);
-
+        int response = vkApiClient.account().setOffline(actor).execute().getValue();
+        System.out.println(response);
         vkFirstName = vkApiClient.account().getProfileInfo(actor).execute().getFirstName();
     }
 }
